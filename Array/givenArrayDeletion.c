@@ -17,20 +17,29 @@ int main(void)
     }
 
     // Deletion from Array at any position
-
-    printf("\nEnter the Position for Delete an Element: ");
-    int pos;
-    scanf("%d", &pos);
-
-    for(int i=pos-1; i<size; i++)
+    while (1)
     {
-        arr[i] = arr[i+1];
-    }
+        printf("\nEnter the Position for Delete an Element: ");
+        int pos;
+        scanf("%d", &pos);
+        if(pos > size || pos <=0)
+        {
+            printf("\nInvalid Choice of Position! Please ! Keep it under the Size of Array (%d)",size);
+        }
+        else
+        {
+            for(int i=pos-1; i<size; i++)
+            {
+                arr[i] = arr[i+1];
+            }
 
-    size--;
-    printf("After The Deletion: ");
-    for(int i=0; i<size; i++)
-    {
-        printf("%d ",arr[i]);
+            size--;
+            printf("After The Deletion: ");
+            for(int i=0; i<size; i++)
+            {
+                printf("%d ",arr[i]);
+            }
+            break;
+        }
     }
 }
