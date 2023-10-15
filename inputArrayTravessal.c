@@ -16,7 +16,6 @@ int main(void)
             }
 
             // array traverse
-
             printf("\nElements in Array are: ");
             for(int i=0; i<size; i++)
             {
