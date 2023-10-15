@@ -2,19 +2,31 @@
 int main(void)
 {
     int arr[50], size;
-    printf("Enter the size of the Array: ");
-    scanf("%d",&size);
-    printf("Enter Elements of Array: ");
-    for(int i=0; i<size; i++)
+    // checking size until find the perfect size
+    while (1)
     {
-        scanf("%d",&arr[i]);
-    }
+        printf("\nEnter the size of the Array: ");
+        scanf("%d",&size);
+        if(size <= 50)
+        {
+            printf("\nEnter Elements of Array: ");
+            for(int i=0; i<size; i++)
+            {
+                scanf("%d",&arr[i]);
+            }
 
-    // array traverse
+            // array traverse
 
-    printf("Elements in Array are: ");
-    for(int i=0; i<size; i++)
-    {
-        printf("%d ",arr[i]);
+            printf("\nElements in Array are: ");
+            for(int i=0; i<size; i++)
+            {
+                printf("%d ",arr[i]);
+            }
+            break;
+        }
+        else
+        {
+            printf("\nInvalid Size of Array! Please give size of array in-between 1-50!!");
+        }
     }
 }
