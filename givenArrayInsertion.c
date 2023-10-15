@@ -21,7 +21,7 @@ int main(void)
     {
         printf("\nWhere do you want to input the Element ? : ");
         scanf("%d",&pos);
-        if(pos > size)
+        if(pos > size || pos <=0)
         {
             printf("\nInvalid Choice of Position! Please ! Keep it under the Size of Array (%d)",size);
         }

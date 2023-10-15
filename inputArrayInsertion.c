@@ -28,7 +28,7 @@ int main(void)
             {
                 printf("\nWhere do you want to input the Element ? : ");
                 scanf("%d",&pos);
-                if(pos > size)
+                if(pos > size || pos <=0)
                 {
                     printf("\nInvalid Choice of Position! Please ! Keep it under the Size of Array (%d)",size);
                 }
@@ -42,8 +42,9 @@ int main(void)
                         arr[i+1] = arr[i];
                     }
                     arr[pos-1] = value;
+                    size++;
                     printf("\nAfter Adding data: ");
-                    for(int i=0; i<=size; i++)
+                    for(int i=0; i<size; i++)
                     {
                         printf("%d ",arr[i]);
                     }
